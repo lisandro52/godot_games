@@ -9,7 +9,7 @@ var enabled = true
 var _orig_node
 var _boss_node
 var _bullet
-var _bullet_scn_path = "res://bullet.scn"
+var _bullet_scn_path = "res://bullets/bullet.scn"
 
 var _elapsed_time = 0
 var _next_time = 0
