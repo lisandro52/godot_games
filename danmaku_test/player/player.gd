@@ -7,6 +7,11 @@ onready var player_sprite = get_node("player_sprite")
 
 func _ready():
 	set_process(true)
+	hitbox_node.connect("body_enter",self, "_collision_enter")
+
+
+func _collision_enter(body):
+	print("Colliding with ", body)
 
 
 func _process(delta):
@@ -31,4 +36,5 @@ func _process(delta):
 
 	if(Input.is_action_pressed("ui_down")):
 		set_pos(get_pos() + Vector2(0, player_speed))
+
 

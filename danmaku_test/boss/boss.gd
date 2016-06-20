@@ -6,7 +6,7 @@ var target_location
 var boss_movement_speed = 3
 var max_distance_to_target = 10
 
-var seconds_to_shoot = 2
+var seconds_to_shoot = 3.5
 var elapsed_time = 0
 var stop_shooting_at = 0
 
@@ -65,9 +65,9 @@ func add_simple_shooter():
 		"boss_node": get_parent().get_node("boss"),
 		"bullet_scn_path": "res://bullets/big_bullet.scn",
 		"bullet_quantity": 12,
-		"rotation_speed": 15,
-		"bullet_speed": 2,
-		"shooting_interval_in_secs": 0.5,
+		"rotation_speed": 2,
+		"bullet_speed": 3,
+		"shooting_interval_in_secs": 0.3,
 		"enabled": false
 	}
 	shooter.initialize_shooter_with_dict(shooter_dic)
@@ -81,10 +81,10 @@ func add_other_shooter():
 		"origin_node": get_parent().get_node("bulletInstancing"),
 		"boss_node": get_parent().get_node("boss"),
 		"bullet_scn_path": "res://bullets/bullet.scn",
-		"bullet_quantity": 6,
+		"bullet_quantity": 7,
 		"rotation_speed": 35,
-		"bullet_speed": 1,
-		"shooting_interval_in_secs": 0.2,
+		"bullet_speed": 1.8,
+		"shooting_interval_in_secs": 0.1,
 		"enabled": false
 	}
 	shooter.initialize_shooter_with_dict(shooter_dic)
