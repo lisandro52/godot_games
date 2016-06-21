@@ -4,6 +4,7 @@ var orig_player_speed = 3
 var slowdown_rate = 0.4 #between 0 and 1
 onready var hitbox_node = get_node("hitbox_node")
 onready var player_sprite = get_node("player_sprite")
+var main_scene
 
 func _ready():
 	set_process(true)
@@ -11,7 +12,10 @@ func _ready():
 
 
 func _collision_enter(body):
-	print("Colliding with ", body)
+	main_scene.restart_scene()
+
+func add_main_scene(node):
+	self.main_scene = node
 
 
 func _process(delta):

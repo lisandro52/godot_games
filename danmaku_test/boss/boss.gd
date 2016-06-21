@@ -21,6 +21,11 @@ func _ready():
 	set_process(true)
 
 
+func _exit_tree():
+	print("boss queue free")
+	#self.queue_free()
+
+
 func _process(delta):
 	elapsed_time += delta
 	if(shooting):
